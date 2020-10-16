@@ -1,0 +1,17 @@
+//Reverse string and reverse case
+using System.Linq;
+public class Hello{
+    public static void Main(){
+        string inputstring="AbcdeFhiJKl";
+        char[] arr = new char[inputstring.Length];
+        int i=0;
+        foreach (char v in inputstring.Select(x => x).Reverse())
+        {
+            if (char.IsUpper(v)) { arr[i]=char.ToLower(v); }else{ arr[i]=char.ToUpper(v);};
+            i=i+1;
+        }
+        string str = new string(arr);
+        System.Console.WriteLine(str);
+        System.Console.ReadLine();
+    }
+}
